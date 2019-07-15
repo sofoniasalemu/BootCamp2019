@@ -52,7 +52,7 @@ def der_cen_2(f,x,h):
 def der_cen_4(f,x,h):
     return (f(x-2*h)-8*f(x-h)+8*f(x+h)-f(x+2*h))/(12*h)
     
-h=1e-3    
+h=1e-1    
 y21=np.zeros((K,1))
 y22=np.zeros((K,1))
 y23=np.zeros((K,1))
@@ -67,8 +67,8 @@ for i in range(K):
     y25[i]=der_cen_2(f,xx[i],h)
     y26[i]=der_cen_4(f,xx[i],h)
     
-ax=plt.gca()
-ax.spines["bottom"].set_position("zero")
+#ax=plt.gca()
+#ax.spines["bottom"].set_position("zero")
 plt.figure(2)
 plt.plot(xx,y21)
 plt.plot(xx,y22)
@@ -76,7 +76,7 @@ plt.plot(xx,y23)
 plt.plot(xx,y24)
 plt.plot(xx,y25)
 plt.plot(xx,y26)
-
+plt.legend(('for','for2','bac1','bac2','cen2','cen4'))
 #### Problem 3 #####
 
 x0=1

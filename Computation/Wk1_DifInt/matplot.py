@@ -47,19 +47,26 @@ plt.plot(X,Y_arctan)
 f=lambda x: 1/(x-1)
 X=np.linspace(-2,6,100)
 
-a=(X>=-2 - X<1).any()
-b=X>1 and X<=6
+
+
+a=np.logical_and(X>=-2, X<1)
+b=np.logical_and(X>1, X<=6)
+
 X1=X[a]
 X2=X[b]
-
-Y1=np.nan(100)
-Y1[X>=-2 and X<1]=f(X>=-2 and X<1)
-Y2=np.nan(100)
-Y2[X>1 and X<=6]=f(X>1 and X<=6)
+Y1=np.empty(100)
+Y1[:]=np.nan
+Y1[a]=f(X1)
+Y2=np.empty(100)
+Y2[:]=np.nan
+Y2[b]=f(X2)
 
 plt.figure(3)
-plt.plot(X,Y1)
-plt.plot(X,Y2)
+plt.plot(X,Y1,linewidth=4,linestyle=':')
+plt.plot(X,Y2,linewidth=4,linestyle=':')
+plt.ylim([-6,6])
+plt.xlim([-2,6])
+plt.show()
 
 
 
