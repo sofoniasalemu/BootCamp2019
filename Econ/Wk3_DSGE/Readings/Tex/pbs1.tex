@@ -1,0 +1,125 @@
+\documentclass[12pt, letterpaper,bibtotoc, tablecaptionabove, figurecaptionabove]{article}
+
+%%%%
+
+\setlength{\headheight}{10pt}
+\setlength{\headsep}{15pt}
+\setlength{\topmargin}{-25pt}
+\setlength{\topskip}{0in}
+\setlength{\textheight}{8.7in}
+\setlength{\footskip}{0.3in}
+\setlength{\oddsidemargin}{0.0in}
+\setlength{\evensidemargin}{0.0in}
+\setlength{\textwidth}{6.5in}
+
+\usepackage{setspace}
+\setstretch{1.1}
+\setlength{\parskip}{5pt}%{6pt}
+\setlength{\parindent}{5pt}
+\usepackage[margin=.85in]{geometry}
+\usepackage{subfiles}
+\usepackage{xcolor}
+\usepackage{bbm}
+\usepackage{graphicx}
+\graphicspath{{images/}{../images/}}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+\newtheorem{lemma}{Lemma}
+\newtheorem{notation}{Notation}
+\newtheorem{corollary}{Corollary}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+%\usepackage{fontspec}
+%\setmainfont{book antiqua}
+
+\usepackage{bm}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=red,
+}
+
+
+
+%%%%
+
+\begin{document}
+\begin{enumerate}
+\item{\bf{Exercise 1}}
+\begin{eqnarray*}
+\frac{1}{e^{z_{t}} K_{t}^{\alpha}-Ae^{z_t}K_t^\alpha}=
+\beta E_{t}\left\{\frac{\alpha e^{z_{t+1}} K_{t+1}^{\alpha-1}}{e^{z_{t+1}} K_{t+1}^{\alpha}-Ae^{z_{t+1}}K_{t+1}^\alpha}\right\}\\
+\frac{1}{e^{z_{t}} K_{t}^{\alpha}-Ae^{z_t}K_t^\alpha}=\frac{\beta \alpha}{K_{t+1}(1-A)}\\
+\frac{1}{e^{z_{t}} K_{t}^{\alpha}(1-A)}=\frac{\beta \alpha}{K_{t+1}(1-A)}\\
+K_{t+1}=A e^{z_t}K_t^\alpha, \text{ where } A=\beta \alpha \ .
+\end{eqnarray*}
+\item{\bf{Exercise 2}}
+\begin{eqnarray*}
+c_{t}=(1-\tau)\left[w_{t} \ell_{t}+\left(r_{t}-\delta\right) k_{t}\right]+k_{t}+T_{t}-k_{t+1}\\
+1/c_t=\beta E_{t}\left\{1/c_{t+1}\left[\left(r_{t+1}-\delta\right)(1-\tau)+1\right]\right\}\\
+-\frac{a}{1-\ell_t}=\frac{1}{c_t} w_{t}(1-\tau)\\
+r_t=\alpha e^{z_t}K_t^{\alpha-1}L_t^{1-\alpha} \\
+ w_t=(1-\alpha)e^{z_t}K_t^\alpha L_t^{-\alpha} \\ 
+{\tau\left[w_{t} \ell_{t}+\left(r_{t}-\delta\right) k_{t}\right]=T_{t}} \\ 
+{z_{t}=\left(1-\rho_{z}\right) \overline{z}+\rho_{z} z_{t-1}+\epsilon_{t}^{z} ; \quad \epsilon_{t}^{z} \sim \text { i.i.d. }\left(0, \sigma_{z}^{2}\right)}
+\end{eqnarray*}
+\item{\bf{Exercise 3}}
+\begin{eqnarray*}
+c_{t}=(1-\tau)\left[w_{t} \ell_{t}+\left(r_{t}-\delta\right) k_{t}\right]+k_{t}+T_{t}-k_{t+1}\\
+c_t^{-\gamma}=\beta E_{t}\left\{1/c_{t+1}\left[\left(r_{t+1}-\delta\right)(1-\tau)+1\right]\right\}\\
+-\frac{a}{1-\ell_t}=c_t^{-\gamma} w_{t}(1-\tau)\\
+r_t=\alpha e^{z_t}K_t^{\alpha-1}L_t^{1-\alpha} \\
+ w_t=(1-\alpha)e^{z_t}K_t^\alpha L_t^{-\alpha} \\ 
+{\tau\left[w_{t} \ell_{t}+\left(r_{t}-\delta\right) k_{t}\right]=T_{t}} \\ 
+{z_{t}=\left(1-\rho_{z}\right) \overline{z}+\rho_{z} z_{t-1}+\epsilon_{t}^{z} ; \quad \epsilon_{t}^{z} \sim \text { i.i.d. }\left(0, \sigma_{z}^{2}\right)}
+\end{eqnarray*}
+
+\item{\bf{Exercise 4}}
+\begin{eqnarray*}
+c_{t}=(1-\tau)\left[w_{t} \ell_{t}+\left(r_{t}-\delta\right) k_{t}\right]+k_{t}+T_{t}-k_{t+1}\\
+c_t^{-\gamma}=\beta E_{t}\left\{1/c_{t+1}\left[\left(r_{t+1}-\delta\right)(1-\tau)+1\right]\right\}\\
+-a(1-\ell_t)^{-\xi}=c_t^{-\gamma} w_{t}(1-\tau)\\
+r_t=\frac{e^{z_t}}{\eta}(\alpha K_t^\eta+(1-\alpha)L_t^\eta)^{\frac{1}{\eta}-1}\alpha\eta K_t^{\eta-1} \\
+ w_t=\frac{e^{z_t}}{\eta}(\alpha K_t^\eta+(1-\alpha)L_t^\eta)^{\frac{1}{\eta}-1}(1-\alpha)\eta L_t^{\eta-1} \\ 
+{\tau\left[w_{t} \ell_{t}+\left(r_{t}-\delta\right) k_{t}\right]=T_{t}} \\ 
+{z_{t}=\left(1-\rho_{z}\right) \overline{z}+\rho_{z} z_{t-1}+\epsilon_{t}^{z} ; \quad \epsilon_{t}^{z} \sim \text { i.i.d. }\left(0, \sigma_{z}^{2}\right)}
+\end{eqnarray*}
+
+\item{\bf{Exercise 5}}
+
+
+\item{\bf{Exercise 6}}
+
+\begin{eqnarray*}
+c_{t}=(1-\tau)\left[w_{t} \ell_{t}+\left(r_{t}-\delta\right) k_{t}\right]+k_{t}+T_{t}-k_{t+1}\\
+c_t^{-\gamma}=\beta E_{t}\left\{c_{t+1}^{-\gamma}\left[\left(r_{t+1}-\delta\right)(1-\tau)+1\right]\right\}\\
+-a(1-\ell_t)^{-\xi}=c_t^{-\gamma} w_{t}(1-\tau)\\
+r_t=\alpha K_t^{\alpha-1}(L_t e^{z_t})^{1-\alpha} \\
+ w_t=K_t^\alpha e^{z_t}(1-\alpha)(L_t e^{z_t})^{-\alpha}\\ 
+{\tau\left[w_{t} \ell_{t}+\left(r_{t}-\delta\right) k_{t}\right]=T_{t}} \\ 
+{z_{t}=\left(1-\rho_{z}\right) \overline{z}+\rho_{z} z_{t-1}+\epsilon_{t}^{z} ; \quad \epsilon_{t}^{z} \sim \text { i.i.d. }\left(0, \sigma_{z}^{2}\right)}
+\end{eqnarray*}
+
+
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,109 @@
+\documentclass[10pt, letterpaper,bibtotoc, tablecaptionabove, figurecaptionabove]{article}
+
+%%%%
+
+\setlength{\headheight}{10pt}
+\setlength{\headsep}{15pt}
+\setlength{\topmargin}{-25pt}
+\setlength{\topskip}{0in}
+\setlength{\textheight}{8.7in}
+\setlength{\footskip}{0.3in}
+\setlength{\oddsidemargin}{0.0in}
+\setlength{\evensidemargin}{0.0in}
+\setlength{\textwidth}{6.5in}
+
+\usepackage{setspace}
+\setstretch{1.1}
+\setlength{\parskip}{5pt}%{6pt}
+\setlength{\parindent}{5pt}
+\usepackage[margin=.85in]{geometry}
+\usepackage{subfiles}
+\usepackage{xcolor}
+\usepackage{bbm}
+\usepackage{graphicx}
+\graphicspath{{images/}{../images/}}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+\newtheorem{lemma}{Lemma}
+\newtheorem{notation}{Notation}
+\newtheorem{corollary}{Corollary}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+%\usepackage{fontspec}
+%\setmainfont{book antiqua}
+
+\usepackage{bm}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=red,
+}
+
+
+
+%%%%
+
+\begin{document}
+
+\begin{enumerate}
+\item {\bf{Exercise 1.3}}
+\begin{itemize}
+\item If $A\in\mathcal G_1$ and is different from empty set and the whole set, then $A^c$ is closed and and doe not belong to $\mathcal G_1$. Thus, $\mathcal G_1$ is not an algebra.  
+\item If $a=b$ then $\emptyset\in \mathcal G_2$. If $b\leq a$, then $\mathbb R\in \mathcal G_2$. Thus by definition of $G_2$, it is an algebra.
+\item If $a=b$ then $\emptyset\in \mathcal G_2$. If $b\leq a$, then $\mathbb R\in \mathcal G_2$. Thus by definition of $G_2$, it  is an $\sigma-$algebra.
+\end{itemize}
+\item{\bf{Exercise 1.7}}
+\begin{itemize}
+\item  $\mathcal A$ is a $\sigma-$algebra. Thus, by definition it contains $\{\emptyset,X\}$
+\item  $\mathcal A$ is a $\sigma-$algebra. By definition it is a family of subsets of $X$, thus, $\mathcal A\subset \mathcal P(X)$.
+\end{itemize}
+\item{\bf{Exercise 1.10}}
+\begin{itemize}
+\item $\emptyset\in \mathcal S_\alpha \ \ \forall \alpha \ \Rightarrow \emptyset \in \cap_\alpha \mathcal S_\alpha$
+\item If $A\in \cap_\alpha \mathcal S_\alpha$, then $A\in \mathcal S_\alpha $ and $A^c\in \mathcal S_\alpha \ \forall \alpha$, hence, $A^c\in \cap_\alpha \mathcal S_\alpha$
+\item If $A_n\in\cap_\alpha\mathcal S_\alpha$, then  then $A_n\in \mathcal S_\alpha $ and $\cup_n A_n\in \mathcal S_\alpha \ \forall \alpha$, hence,  $\cap_n A_n \in \cup_\alpha \mathcal S_\alpha$
+\end{itemize}
+\item{\bf{Exercise 1.22}}
+\begin{itemize}
+\item  $A\subset B \ \Rightarrow B=A\cup (B\cap A^c)$. Since $A$ and $B\cap A^c$ are disjoint, $\mu(B)=\mu(A)+\mu(B\cap A^c)$. Thus, $\mu(A)\leq\mu(B)$.
+\item  $A=(A\cap B^c)\cup (A\cap B)$ and $B=(B\cap A^c)\cup(B\cap A)$. $\mu(A)+\mu(B)=\mu(A\cap B)+\mu(A\cap B)+\mu(A\cap B^c)+\mu(A^c\cap B)=\mu(A\cap B)+\mu(A\cup B)$. Thus, $\mu(A)+\mu(B)\geq \mu(A\cup B)$. 
+\end{itemize}
+\item{\bf{Exercise 1.23}}
+\begin{itemize}
+\item $\lambda(\emptyset)=\mu(\emptyset\cap B)=\mu(\emptyset)=0$.
+\item $\lambda(\cup_n \mathcal A_n)=\mu((\cup_n\mathcal A_n)\cap B)=\mu(\cup_n(\mathcal A_n\cap B))=\sum_n\mu(\mathcal A_n\cap B)=\sum_n\lambda(\mathcal A_n)$. ($\{\mathcal A_n\}$ disjoint $\rightarrow \{\mathcal A_n\cap B\}$ disjoint.)
+\end{itemize}
+\item {\bf{Exercise 1.26}}
+\begin{itemize}
+\item $\mu(\cap_n\mathcal A_n)=\mu((\cup_n \mathcal A_n^c)^c)=\mu(X)-\mu(\cup_n \mathcal A_n^c)=\mu(X)-\lim_{n\rightarrow\infty}\mu(\mathcal A_n^c)=\mu(X)-\lim_{n\rightarrow\infty}(\mu(X)-\mu(\mathcal A_n))=\lim_{n\rightarrow\infty}\mu(\mathcal A_n)$. By (i).
+\end{itemize}
+
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
